@@ -37,7 +37,9 @@ the_end();
 
 
 ```javascript
-const time = function(){
+import mw from 'mission-watch'
+
+const time = function(){ // 随机生成一个整百的毫秒数
     let ms = parseInt(Math.random() * 10) * 100; //整百
     return ms
 }
@@ -63,30 +65,7 @@ let foo3 = function(f3){
     return foo('foo3', f3)
 }
 
-let mission = function(array, callback){
-    if(array.constructor !== Array){
-        console.error('第一个参数必须为数组,顶你个肺啊')
-        return;
-    }
-
-    let len = array.length;
-    let proxy = new Proxy({ progress: 0 }, {
-        set(target, key, value, receiver){
-            if(proxy.progress >= len - 1){
-                callback();
-            }
-            return Reflect.set(target, key, value, receiver);
-        }
-    })
-
-    array.forEach((item) => {
-        item(function(){
-            proxy.progress += 1;
-        })
-    })
-}
-
-mission([foo1, foo2, foo3], function(){
+mw([foo1, foo2, foo3], function(){
     console.log('end')
 })
 
