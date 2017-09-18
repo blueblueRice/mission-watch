@@ -1,7 +1,7 @@
 {
   "name": "mission-watch",
   "version": "0.0.6",
-  "description": "none",
+  "description": "一个回调任务监听模块",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
