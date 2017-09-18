@@ -1,8 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-
 module.exports = {
 	devtool: "source-map",
 
@@ -25,16 +23,5 @@ module.exports = {
 				]
 			}
 		]
-	},
-
-	devServer: {
-		hot: true,
-		contentBase: path.resolve(__dirname, 'dist'),
-		publicPath: '/'
-	},
-
-	plugins: [
-		new webpack.HotModuleReplacementPlugin(),
-		new CleanWebpackPlugin(['./dist']),
-	]
+	}
 }

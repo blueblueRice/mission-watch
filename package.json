@@ -1,8 +1,8 @@
 {
   "name": "mission-watch",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "none",
-  "main": "./dist/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
