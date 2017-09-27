@@ -18,7 +18,7 @@ the_end();
 >
 > async_function2() 
 >
-> async_function1() 同时执行
+> async_function3() 同时执行
 >
 > 等到三个异步程序全都完全执行完毕之后 the_end() 再执行
 
